@@ -6,10 +6,10 @@ class MinStack:
 
     def push(self, value: int) -> None:
         self.stack.append(value)
-        if len(self.minrecord) == 0:
+        if len(self.minrecord) == 0 or value < self.minrecord[-1]:
             self.minrecord.append(value)
         else:
-            self.minrecord.append(min(value,self.minrecord[-1]))
+            self.minrecord.append(self.minrecord[-1])
         
 
     def pop(self) -> None:
