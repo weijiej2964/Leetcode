@@ -29,7 +29,6 @@ class Solution:
             list2 = list2.next
         
         while list1 or list2:
-            print(list1,list2)
             if not list2 or (list1 and list1.val <= list2.val):
                 end.next = list1
                 end = end.next
